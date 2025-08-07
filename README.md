@@ -32,7 +32,7 @@ which contains features such as:
 ├── data_loader.py # CSV loading, cleaning, and record validation
 ├── plots/ # Folder where all plots are saved
 ├── Sleep_health_and_lifestyle_dataset.csv
-├── sleep_quality_analysis_original.py # Original unrefactored version
+├── sleep_quality-analysis_original.py # Original unrefactored version
 ├── requirements.txt
 └── README.md
 
