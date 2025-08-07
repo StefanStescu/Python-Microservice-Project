@@ -1,0 +1,24 @@
+# Ignore virtual environment
+.venv/
+venv/
+env/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore VS Code settings (optional but recommended)
+.vscode/
+
+# Ignore image outputs and other logs
+*.png
+*.jpg
+*.jpeg
+*.log
+.DS_Store
+.ipynb_checkpoints/

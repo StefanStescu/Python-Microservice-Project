@@ -1,0 +1,25 @@
+# Core Analysis & Data Tools
+pandas
+numpy
+scipy
+statsmodels
+
+# CLI
+click
+pydantic
+
+# Visualization
+matplotlib
+seaborn
+
+# Backend API
+fastapi
+uvicorn
+
+# Frontend UI
+streamlit
+requests
+
+# Linting (optional but useful)
+flake8
+black
