@@ -71,7 +71,7 @@ Runs standard statistical tests on the linear regression model:
 
 ---
 
-## 1.4. ⚙️ How to Run
+## 1.4. ⚙️ How to Run (Requires Python version below 3.12.0)
 
 ### 1.4.1. Install & activate virtual environment
 
