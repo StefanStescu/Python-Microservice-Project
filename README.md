@@ -87,3 +87,6 @@ uvicorn main:app --reload
 
 ### 1.4.3. ⚙️ Run Streamlit UI
 streamlit run streamlit_app.py
+
+### 1.4.4. Project made by: Stescu Stefan & Alexandru Bardasu
+
