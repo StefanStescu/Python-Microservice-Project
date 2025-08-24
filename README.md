@@ -1,79 +1,103 @@
-# 1. 😴 Sleep Quality Analysis Microservice
+# 😴 Sleep Quality Analysis Microservice
 
-This project is a Python-based microservice that performs data analysis, statistical modeling, and diagnostics on sleep and lifestyle data. It offers:
+**Sleep Quality Analysis** is a Python-based microservice that performs data analysis, statistical modeling, and diagnostics on sleep and lifestyle data.
 
-- ⚙️ Command-line tools via `click`
-- ⚡ REST API using `FastAPI`
-- 🎛️ Streamlit-based user interface
-- ✅ Data validation using Pydantic
-- 📊 Graphs and regression analysis using `matplotlib`, `seaborn`, `statsmodels`
+![Preview](preview.png)
 
 ---
 
-## 1.1. 📁 Dataset
+## 🚀 Features
 
-The project uses:
-``Sleep_health_and_lifestyle_dataset.csv``  
-which contains features such as:
-
-- Demographics (Age, Gender, Occupation)
-- Lifestyle metrics (Physical Activity, Heart Rate, BMI)
-- Sleep metrics (Duration, Quality, Disorder)
-- Stress levels and derived categories
+- ⚙️ **Command-line tools**: Built with `click` for terminal access.
+- ⚡ **REST API**: Exposed using `FastAPI`.
+- 🎛️ **Streamlit UI**: Visual interface for data exploration and plotting.
+- ✅ **Data validation**: Powered by `Pydantic`.
+- 📊 **Plotting and Regression**: Uses `matplotlib`, `seaborn`, and `statsmodels`.
 
 ---
 
-## 1.2. 🏗️ Project Structure
+## 🗂️ Dataset
 
-┣  cli.py # Command-line interface (analyze, plot, regression, diagnostics)
-┣  main.py # FastAPI backend
-┣  streamlit_app.py # Streamlit frontend UI
-┣  models.py # Pydantic model for validation
-┣  data_loader.py # CSV loading, cleaning, and record validation
-┣  plots/ # Folder where all plots are saved
-┣  Sleep_health_and_lifestyle_dataset.csv
-┣  sleep_quality-analysis_original.py # Original unrefactored version
-┣  requirements.txt
-┣  README.md
+The project uses the file:
 
----
+```
+Sleep_health_and_lifestyle_dataset.csv
+```
 
-## 1.3. 💡 Features
+It includes the following types of data:
 
-### 1.3.1. 🔍 Analyze
-- Preprocesses and filters the dataset
-- Validates data using `Pydantic`
-- Displays metadata:
-  - column names
-  - data types
-  - inferred roles (dependent/independent)
-
-### 1.3.2. 📈 Regression
-- Simple linear: `Stress_Level ~ Quality_of_Sleep`
-- Multiple linear: `Stress_Level ~ Quality_of_Sleep + Age`
-- Non-linear (quadratic): adds `Quality_of_Sleep^2`
-- ANOVA comparison of model fits
-
-### 1.3.3. 🧪 Diagnostics
-Runs standard statistical tests on the linear regression model:
-
-- **White test** – heteroskedasticity
-- **Breusch-Pagan test** – heteroskedasticity
-- **Durbin-Watson test** – autocorrelation
-- **Jarque-Bera test** – normality of residuals
-
-### 1.3.4. 📊 Plotting
-- Histograms and boxplots for numerical variables
-- Countplots for categorical variables
-- All charts are saved in the `plots/` directory
-- If a plot already exists, it is **not regenerated**
-- You can view all saved plots via Streamlit interface
+- **Demographics**: Age, Gender, Occupation  
+- **Lifestyle metrics**: Physical Activity, Heart Rate, BMI  
+- **Sleep metrics**: Duration, Quality, Disorder  
+- **Stress levels**: With derived categorical features
 
 ---
 
-## 1.4. ⚙️ How to Run (Requires Python version below 3.12.0)
+## 🧱 Project Structure
 
-### 1.4.1. Install & activate virtual environment
+```
+📦 sleep-quality-analysis
+ ┣ 📜cli.py                   # Command-line interface
+ ┣ 📜main.py                  # FastAPI backend
+ ┣ 📜streamlit_app.py         # Streamlit frontend
+ ┣ 📜models.py                # Pydantic data validation
+ ┣ 📜data_loader.py           # Data loading & cleaning
+ ┣ 📂plots/                   # Folder for generated plots
+ ┣ 📜Sleep_health_and_lifestyle_dataset.csv
+ ┣ 📜sleep_quality-analysis_original.py
+ ┣ 📜requirements.txt
+ ┣ 📜README.md
+```
+
+---
+
+## 💡 Key Capabilities
+
+### 🔍 Analyze
+
+- Cleans and filters the dataset
+- Validates structure and types with Pydantic
+- Displays:
+  - Column names
+  - Data types
+  - Inferred roles (dependent/independent)
+
+### 📈 Regression
+
+- **Simple Linear**:  
+  `Stress_Level ~ Quality_of_Sleep`
+
+- **Multiple Linear**:  
+  `Stress_Level ~ Quality_of_Sleep + Age`
+
+- **Non-linear (Quadratic)**:  
+  Adds `Quality_of_Sleep²` to model
+
+- **ANOVA**:  
+  Compares model fits using ANOVA
+
+### 🧪 Diagnostics
+
+Performs key statistical tests:
+
+- White Test — heteroskedasticity  
+- Breusch-Pagan Test — heteroskedasticity  
+- Durbin-Watson Test — autocorrelation  
+- Jarque-Bera Test — normality of residuals  
+
+### 📊 Plotting
+
+- Histogram & boxplot visualizations (numeric)
+- Countplot visualizations (categorical)
+- Charts are stored in `plots/`
+- If a chart already exists, it’s not regenerated
+- Streamlit UI provides plot browsing
+
+---
+
+## ⚙️ Setup & Run (Python < 3.12.0)
+
+### 🔧 Create Virtual Environment
 
 ```bash
 python -m venv .venv
@@ -82,11 +106,20 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 pip install -r requirements.txt
 ```
 
-### 1.4.2. ⚙️ Run FastAPI backend
+### 🚀 Run Backend
+
+```bash
 uvicorn main:app --reload
+```
 
-### 1.4.3. ⚙️ Run Streamlit UI
+### 🚀 Run Streamlit UI
+
+```bash
 streamlit run streamlit_app.py
+```
 
-### 1.4.4. Project made by: Stescu Stefan & Alexandru Bardasu
+---
 
+## 👨‍💻 Authors
+
+**Stescu Stefan** & **Alexandru Bardasu**
