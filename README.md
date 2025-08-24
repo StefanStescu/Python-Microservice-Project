@@ -25,16 +25,16 @@ which contains features such as:
 
 ## 1.2. 🏗️ Project Structure
 
-├── cli.py # Command-line interface (analyze, plot, regression, diagnostics)
-├── main.py # FastAPI backend
-├── streamlit_app.py # Streamlit frontend UI
-├── models.py # Pydantic model for validation
-├── data_loader.py # CSV loading, cleaning, and record validation
-├── plots/ # Folder where all plots are saved
-├── Sleep_health_and_lifestyle_dataset.csv
-├── sleep_quality-analysis_original.py # Original unrefactored version
-├── requirements.txt
-└── README.md
+┣  cli.py # Command-line interface (analyze, plot, regression, diagnostics)
+┣  main.py # FastAPI backend
+┣  streamlit_app.py # Streamlit frontend UI
+┣  models.py # Pydantic model for validation
+┣  data_loader.py # CSV loading, cleaning, and record validation
+┣  plots/ # Folder where all plots are saved
+┣  Sleep_health_and_lifestyle_dataset.csv
+┣  sleep_quality-analysis_original.py # Original unrefactored version
+┣  requirements.txt
+┣  README.md
 
 ---
 
