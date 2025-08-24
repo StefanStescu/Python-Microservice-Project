@@ -16,7 +16,7 @@ build/
 .vscode/
 
 # Ignore image outputs and other logs
-*.png
+# *.png
 *.jpg
 *.jpeg
 *.log
